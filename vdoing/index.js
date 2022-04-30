@@ -11,7 +11,7 @@ const CARD_LIST = 'cardList'
 const CARD_IMG_LIST = 'cardImgList'
 
 // siteConfig base 配置
-let base = ''
+let base = '/blog/'
 
 
 // Theme API.
