@@ -116,7 +116,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
 
     // 博主信息 (显示在首页侧边栏)
     blogger: {
-      avatar: '/img/01-luoxiaofeng.jpeg',
+      avatar: '/blog/img/01-luoxiaofeng.jpeg',
       name: 'Louis',
       //slogan: '专注后端技术',
     },
