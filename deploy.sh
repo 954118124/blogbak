@@ -25,10 +25,11 @@ git init
 
 #git remote -v
 #git remote add origin https://${GITHUB_TOKEN}@github.com:954118124/blog.git
-
+git remote set-url origin https://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@github.com/954118124/blog.git
 git add -A
 git commit -m "${msg}"
-git push -f $githubUrl master:gh-pages # 推送到github gh-pages分支
+git remote set-url origin https://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@github.com/954118124/blog.git
+git push -f master:gh-pages # 推送到github gh-pages分支
 
 #git push origin master -u
 
