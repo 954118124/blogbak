@@ -31,6 +31,9 @@
   },
   "description": "luoxiaofeng blog",
   "main": "index.js",
-  "repository": "https://github.com/954118124/blog.git",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/954118124/blog.git"
+  },
   "author": "luoxiaofeng <“954118124@qq.com”>"
 }
