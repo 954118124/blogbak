@@ -17,20 +17,20 @@ if [ -z "$GITHUB_TOKEN" ]; then
   githubUrl=git@github.com:954118124/blog.git
 else
   msg='来自github actions的自动部署'
-  githubUrl=https://${GITHUB_TOKEN}@github.com:954118124/blog.git
+  githubUrl=https://luoxiaofeng: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@github.com/954118124/blog.git
 fi
 git config --global user.name "luoxiaofeng"
 git config --global user.email "954118124@qq.com"
 git init
 
-git remote -v
-git remote add origin https://${GITHUB_TOKEN}@github.com:954118124/blog.git
+#git remote -v
+#git remote add origin https://${GITHUB_TOKEN}@github.com:954118124/blog.git
 
 git add -A
 git commit -m "${msg}"
-#git push -f $githubUrl master:gh-pages # 推送到github gh-pages分支
+git push -f $githubUrl master:gh-pages # 推送到github gh-pages分支
 
-git push origin master -u
+#git push origin master -u
 
 # deploy to coding pages
 # echo 'www.luoxiaofeng.com\nluoxiaofeng.com' > CNAME  # 自定义域名
