@@ -22,9 +22,15 @@ fi
 git config --global user.name "luoxiaofeng"
 git config --global user.email "954118124@qq.com"
 git init
+
+git remote -v
+git remote add origin https://${GITHUB_TOKEN}@github.com:954118124/blog.git
+
 git add -A
-git commit -m "${msg}-${GITHUB_TOKEN}"
-git push -f $githubUrl master:gh-pages # 推送到github gh-pages分支
+git commit -m "${msg}"
+#git push -f $githubUrl master:gh-pages # 推送到github gh-pages分支
+
+git push origin master -u
 
 # deploy to coding pages
 # echo 'www.luoxiaofeng.com\nluoxiaofeng.com' > CNAME  # 自定义域名
