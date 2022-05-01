@@ -33,7 +33,7 @@
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/954118124/blog.git"
+    "url": "git+git@github.com:954118124/blog.git"
   },
   "author": "luoxiaofeng <“954118124@qq.com”>"
 }
