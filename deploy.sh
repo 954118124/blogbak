@@ -19,13 +19,13 @@ else
   msg='来自github actions的自动部署'
   githubUrl=https://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@github.com/954118124/blog.git
 fi
-git remote set-url origin https://github.com/954118124/blog.git
+git remote set-url origin https://louis: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@github.com/954118124/blog.git
 git config --global user.name "luoxiaofeng"
 git config --global user.password "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"
 git init
 
 #git remote -v
-#git remote add origin https://${GITHUB_TOKEN}@github.com:954118124/blog.git
+git remote set-url origin https://louis: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@github.com/954118124/blog.git
 git add -A
 git commit -m "${msg}"
 git push -f master:gh-pages # 推送到github gh-pages分支
