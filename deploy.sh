@@ -17,15 +17,14 @@ if [ -z "$GITHUB_TOKEN" ]; then
   githubUrl=git@github.com:954118124/blog.git
 else
   msg='来自github actions的自动部署'
-  githubUrl=https://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@github.com/954118124/blog.git
+  githubUrl=https://954118124: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@github.com/954118124/blog.git
 fi
 
-#git config --global user.name "luoxiaofeng"
-#git config --global user.email "954118124@qq.com"
+git config --global user.name "954118124"
+git config --global user.email "954118124@qq.com"
 git init
 git add -A
 git commit -m "${msg}"
-git remote set-url origin https://luoxiaofeng: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@github.com/954118124/blog.git
 git push -f master:gh-pages # 推送到github gh-pages分支
 
 # deploy to coding pages
