@@ -26,8 +26,7 @@ git init
 git add -A
 git commit -m "${msg}"
 git remote set-url origin https://luoxiaofeng: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@github.com/954118124/blog.git
-git push -f master
-#git push -f master:gh-pages # 推送到github gh-pages分支
+git push -f master:gh-pages # 推送到github gh-pages分支
 
 # deploy to coding pages
 # echo 'www.luoxiaofeng.com\nluoxiaofeng.com' > CNAME  # 自定义域名
