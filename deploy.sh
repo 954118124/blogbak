@@ -25,7 +25,7 @@ fi
 git init
 git add -A
 git commit -m "${msg}"
-git remote set-url origin https://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@github.com/954118124/blog.git
+git remote set-url origin https://luoxiaofeng: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@github.com/954118124/blog.git
 git push -f master
 #git push -f master:gh-pages # 推送到github gh-pages分支
 
