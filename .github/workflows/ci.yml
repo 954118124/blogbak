@@ -21,17 +21,27 @@ jobs:
 
     steps:
       - name: Checkout # 步骤1
-        uses: actions/checkout@v1 # 使用的动作。格式：userName/repoName。作用：检出仓库，获取源码。 官方actions库：https://github.com/actions
+        uses: actions/checkout@master # 使用的动作。格式：userName/repoName。作用：检出仓库，获取源码。 官方actions库：https://github.com/actions
         with:
-          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+          persist-credentials: false
       - name: Use Node.js ${{ matrix.node-version }} # 步骤2
         uses: actions/setup-node@v1 # 作用：安装nodejs
         with:
           node-version: ${{ matrix.node-version }} # 版本
-      - name: run deploy.sh # 步骤3
-        env: # 设置环境变量
-          GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }} 
-          CODING_TOKEN: ${{ secrets.CODING_TOKEN }}
-        run: npm install && npm run deploy
+      
+      # 生成静态文件
+      - name: Build
+        run: npm install && npm run build
+      # 2、部署到 GitHub Pages
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@releases/v3
+        with:
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+          REPOSITORY_NAME: https://github.com/954118124/blog.git
+          BRANCH: gh-pages
+          FOLDER: docs/.vuepress/dist
+          #注意这里是 npm run build 生成静态资源的路径：`docs/.vuepress/dist`
+
+
 
       # 如只提交到github pages可以使用github-pages-deploy-action，详见: https://github.com/JamesIves/github-pages-deploy-action
