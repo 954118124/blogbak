@@ -123,13 +123,13 @@ export interface VdoingThemeConfig extends NoSidebar4DefaultThemeConfig {
     }[]
   }
 
-  /**
-   * 页脚信息
-   */
-  footer?: {
-    createYear: number,
-    copyrightInfo: string
-  }
+  // /**
+  //  * 页脚信息
+  //  */
+  // footer?: {
+  //   createYear: number,
+  //   copyrightInfo: string
+  // }
 
   /**
    * 扩展自动生成frontmatter。
