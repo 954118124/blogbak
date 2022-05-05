@@ -40,10 +40,8 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
         link: '',
       },
       {
-        text: '更多',
-        items: [
-          { text: '友情链接', link: '/friends/' },
-        ],
+        text: '友情链接',
+        link: '/friends/',
       },
       // { text: '关于', link: '/about/',
       //   items: [
