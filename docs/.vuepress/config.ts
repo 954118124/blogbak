@@ -4,7 +4,6 @@
 import { resolve } from 'path'
 import { defineConfig4CustomTheme, UserPlugins } from 'vuepress/config'
 import { VdoingThemeConfig } from 'vuepress-theme-vdoing/types'
-import dayjs from 'dayjs'
 import baiduCode from './config/baiduCode' // 百度统计hm码
 import htmlModules from './config/htmlModules' // 自定义插入的html块
 
@@ -43,25 +42,6 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
         text: '友情链接',
         link: '/friends/',
       },
-      // { text: '关于', link: '/about/',
-      //   items: [
-      //     { text: '测试', link: '/pages/3dc7a2/' },
-      //     { text: '测试123', link: '/pages/99d722/' },
-      //   ],
-      // },
-      // {
-      //   text: '收藏',
-      //   link: '/pages/beb6c0bd8a66cea6/',
-      // },
-      // {
-      //   text: '索引',
-      //   link: '/archives/',
-      //   items: [
-      //     { text: '分类', link: '/categories/' },
-      //     { text: '标签', link: '/tags/' },
-      //     { text: '归档', link: '/archives/' },
-      //   ],
-      // },
     ],
     sidebarDepth: 2, // 侧边栏显示深度，默认1，最大2（显示到h3标题）
     logo: '/img/star.png', // 导航栏logo
@@ -137,12 +117,6 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
     //   ],
     // },
 
-    // 页脚信息
-    // footer: {
-    //   createYear: 2022, // 博客创建年份
-    //   copyrightInfo:'Evan Xu | <a href="https://github.com/954118124/vuepress-theme-vdoing/blob/master/LICENSE" target="_blank">MIT License</a>', // 博客版权信息，支持a标签或换行标签</br>
-    // },
-
     // 扩展自动生成frontmatter。（当md文件的frontmatter不存在相应的字段时将自动添加。不会覆盖已有的数据。）
     extendFrontmatter: {
       author: {
@@ -162,19 +136,12 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
       'meta',
       {
         name: 'keywords',
-        content: '后端博客,个人技术博客,后端面试题,技术文档,学习,面试,Java,mysql,ES,Oracle,K8S,jenkins,docker,jvm,spring cloud,git,github,markdown',
+        content: '后端博客,个人技术博客,技术文档,学习,Java,mysql,ES,Oracle,K8S,jenkins,docker,jvm,spring cloud,git,github,markdown',
       },
     ],
     ['meta', { name: 'baidu-site-verification', content: '7F55weZDDc' }], // 百度统计的站长验证（你可以去掉）
     ['meta', { name: 'theme-color', content: '#11a8cd' }], // 移动浏览器主题颜色
-    // [
-    //   'script',
-    //   {
-    //     'data-ad-client': 'ca-pub-7828333725993554',
-    //     async: 'async',
-    //     src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js',
-    //   },
-    // ], // 网站关联Google AdSense 与 html格式广告支持（你可以去掉）
+
   ],
 
 
@@ -272,14 +239,6 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
     //     },
     //   },
     // ],
-    [
-      '@vuepress/last-updated', // "上次更新"时间格式
-      {
-        transformer: (timestamp, lang) => {
-          return dayjs(timestamp).format('YYYY/MM/DD, HH:mm:ss')
-        },
-      },
-    ],
   ],
 
   markdown: {
