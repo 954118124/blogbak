@@ -36,7 +36,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
       },
       {
         text: '流程规范',
-        link: '',
+        link: '/pages/c486c7/',
       },
       {
         text: '友情链接',
