@@ -51,7 +51,7 @@ jobs:
         env:
           SSH_PRIVATE_KEY: ${{ secrets.LOUIS_ACCESS }}
           ARGS: "-avz --delete"
-          SOURCE: "dist/"
+          SOURCE: "docs/.vuepress/dist"
           REMOTE_HOST: 43.138.216.21
           REMOTE_USER: root
           TARGET: /louis/blog/
