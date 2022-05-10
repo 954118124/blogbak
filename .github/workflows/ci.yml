@@ -45,6 +45,17 @@ jobs:
           BRANCH: gh-pages
           FOLDER: docs/.vuepress/dist #注意这里是 npm run build 生成静态资源的路径：docs/.vuepress/dist
 
+
+
+
+
+
+
+
+
+
+
+
 #      # 5、部署到 腾讯云 服务器
 #      - name: Deploy
 #        uses: easingthemes/ssh-deploy@v2.0.7
@@ -56,15 +67,15 @@ jobs:
 #          REMOTE_USER: root
 #          TARGET: /louis/blog/
 
-      # 5、上传 腾讯云 服务器
-      - name: Upload
-        uses: appleboy/scp-action@master
-        with:
-          host: 43.138.216.21 # 公网ip
-          username: root # 用户名
-          key: ${{ secrets.LOUIS_ACCESS }} # 私钥
-          source: "docs/.vuepress/dist" # 发送文件
-          target: "/louis/blog" # 目标目录
+#      # 5、上传 腾讯云 服务器
+#      - name: Upload
+#        uses: appleboy/scp-action@master
+#        with:
+#          host: 43.138.216.21 # 公网ip
+#          username: root # 用户名
+#          key: ${{ secrets.LOUIS_ACCESS }} # 私钥
+#          source: "docs/.vuepress/dist" # 发送文件
+#          target: "/louis/blog" # 目标目录
 
 #      # 5.同步到 gitee 的仓库
 #      - name: Sync to Gitee
