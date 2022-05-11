@@ -32,7 +32,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
       
       {
         text: '技术应用',
-        link: '/pages/6e6e98/',
+        link: '/pages/f811c1/',
       },
       {
         text: '流程规范',
