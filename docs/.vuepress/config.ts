@@ -39,7 +39,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
         link: '/pages/bcce0d/',
       },
       {
-        text: '友情链接',
+        text: '更多',
         link: '/friends/',
       },
     ],
