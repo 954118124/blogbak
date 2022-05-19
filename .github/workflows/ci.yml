@@ -36,14 +36,14 @@ jobs:
       - name: Build
         run: npm install && npm run build
 
-      # 4.部署到 GitHub Pages
-      - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@releases/v3
-        with:
-          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-          REPOSITORY_NAME: 954118124/blog
-          BRANCH: gh-pages
-          FOLDER: docs/.vuepress/dist #注意这里是 npm run build 生成静态资源的路径：docs/.vuepress/dist
+#      # 4.部署到 GitHub Pages
+#      - name: Deploy
+#        uses: JamesIves/github-pages-deploy-action@releases/v3
+#        with:
+#          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+#          REPOSITORY_NAME: 954118124/blog
+#          BRANCH: gh-pages
+#          FOLDER: docs/.vuepress/dist #注意这里是 npm run build 生成静态资源的路径：docs/.vuepress/dist
 
 #      # 5、上传 腾讯云 服务器
 #      - name: Upload
@@ -60,7 +60,7 @@ jobs:
         uses: appleboy/scp-action@master
         with:
           #需要部署的文件地址
-          source: 'docs/.vuepress/dist'
+          source: 'docs/.vuepress/dist/*'
           # SSH address  服务器地址
           host: 43.138.216.21 # 公网ip
           # Remote dir path  服务器下部署文件存放路径
