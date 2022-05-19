@@ -96,26 +96,12 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
       //slogan: '专注后端技术',
     },
 
-    // social: {
-    //   // iconfontCssFile: '//at.alicdn.com/t/xxx.css', // 可选，阿里图标库在线css文件地址，对于主题没有的图标可自己添加。阿里图片库：https://www.iconfont.cn/
-    //   icons: [
-    //     {
-    //       iconClass: 'icon-youjian',
-    //       title: '发邮件',
-    //       link: 'mailto:954118124',
-    //     },
-    //     {
-    //       iconClass: 'icon-github',
-    //       title: 'GitHub',
-    //       link: 'https://github.com/954118124',
-    //     },
-    //     {
-    //       iconClass: 'icon-erji',
-    //       title: '听音乐',
-    //       link: 'https://music.163.com/#/playlist?id=755597173',
-    //     },
-    //   ],
-    // },
+    // 页脚信息
+    footer: {
+      createYear: 2022, // 博客创建年份
+      copyrightInfo:
+          'Louis | <a href="https://beian.miit.gov.cn" target="_blank">粤ICP备2022060093号-1</a>', // 博客版权信息，支持a标签或换行标签</br>
+    },
 
     // 扩展自动生成frontmatter。（当md文件的frontmatter不存在相应的字段时将自动添加。不会覆盖已有的数据。）
     extendFrontmatter: {
