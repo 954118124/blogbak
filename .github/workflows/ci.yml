@@ -45,17 +45,34 @@ jobs:
           BRANCH: gh-pages
           FOLDER: docs/.vuepress/dist #注意这里是 npm run build 生成静态资源的路径：docs/.vuepress/dist
 
-      # 5、上传 腾讯云 服务器
-      - name: Upload
+#      # 5、上传 腾讯云 服务器
+#      - name: Upload
+#        uses: appleboy/scp-action@master
+#        with:
+#          host: 43.138.216.21 # 公网ip
+#          username: root # 用户名
+#          key: ${{ secrets.LOUIS_ACCESS }} # 私钥
+#          source: "docs/.vuepress/dist" # 发送文件
+#          target: "/louis/blog" # 目标目录
+
+
+      - name: copy file via ssh key
         uses: appleboy/scp-action@master
         with:
+          #需要部署的文件地址
+          source: 'docs/.vuepress/dist/*'
+          # SSH address  服务器地址
           host: 43.138.216.21 # 公网ip
-          username: root # 用户名
+          # Remote dir path  服务器下部署文件存放路径
+          target: '/louis/blogtest'
+          # SSH Port  服务器端口
+          port: 22
+          # SSH User name   用户名
+          username: root
+          # SSH User password  用户密码
+          #  password: ${{ secrets.PASSWORD }}
+          # key  密匙
           key: ${{ secrets.LOUIS_ACCESS }} # 私钥
-          source: "docs/.vuepress/dist" # 发送文件
-          target: "/louis/blog" # 目标目录
-
-
 
 
 
